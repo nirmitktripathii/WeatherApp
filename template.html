@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App and AQI Predictor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="weatherApp.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather App and Rainfall Predictor</h1>
+        <form id="weatherForm">
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter a location"
+          />
+          <label for="aqiChoice">Include AQI:</label>
+          <select id="aqiChoice" name="aqiChoice">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+          <button type="submit">Get Weather</button>
+        </form>
+      </header>
+
+      <section class="content">
+        <div id="weatherInfo"></div>
+        <table id="weatherTable">
+          <!-- Weather information will be dynamically populated using JavaScript -->
+        </table>
+        <table id="aqiTable" style="display: none">
+          <!-- AQI information will be dynamically populated using JavaScript -->
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
